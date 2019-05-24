@@ -1,0 +1,35 @@
+{% extends 'add_item.html' %}
+{% block list %}
+
+<form method="POST">
+    <div class="form-group align-items-center">
+        {% for i in range(itemdes|length) %}
+        <div class="item col-md-6 col-sm-12">
+            <input type="checkbox">
+            <label>
+                
+                {{ itemdes[i] }} 
+            </label>
+                &nbsp 
+                
+            <label>
+                {% if deadline[i] <= currentDate %}
+                    <div class="red">{{ deadline[i] }} </div>
+                {% else %}
+                    {{ deadline[i] }}
+                {% endif%}
+                
+            
+                <a href="/delete?id={{ i }}" type="button" class="btn btn-danger delete">DELETE</a>
+            </label>
+            <hr/>  
+        </div>
+        {% endfor %}
+        <br>
+        <br>
+        <a name="" id="" class="btn btn-primary" href="/" role="button">Add more items</a>
+
+    </div>
+</form>
+{% endblock %}
+

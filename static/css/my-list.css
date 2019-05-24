@@ -1,0 +1,91 @@
+html,body {
+	height: 100%;
+}
+
+body.my-list {
+	background-color: #f7f9fb;
+	font-size: 14px;
+}
+
+.my-list .brand {
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin: 40px auto;
+	box-shadow: 0 0 40px rgba(0,0,0,.05);
+}
+
+.my-list .brand img {
+	width: 100%;
+}
+
+.my-list .card-wrapper {
+	width: 400px;
+}
+
+.my-list .card {
+	border-color: transparent;
+	box-shadow: 0 0 40px rgba(0,0,0,.05);
+}
+
+.my-list .card.fat {
+	padding: 10px;
+}
+
+.my-list .card .card-title {
+	margin-bottom: 30px;
+}
+
+.my-list .form-control {
+	border-width: 2.3px;
+}
+
+.my-list ul{
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.my-list .form-group label {
+	width: initial !important;
+}
+
+.my-list .btn.btn-block {
+	padding: 12px 10px;
+}
+
+.my-list .margin-top20 {
+	margin-top: 20px;
+}
+
+.my-list .no-margin {
+	margin: 0;
+}
+
+.my-list .footer {
+	margin: 40px 0;
+	color: #888;
+	text-align: center;
+}
+
+.red {
+	color: red;
+}
+
+li{
+	list-style-type: none;
+}
+
+input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+}
+
+.item {
+	white-space: nowrap;
+	display:inline-block;
+}
+
+label{
+	padding-right: 5em !important;
+}

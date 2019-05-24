@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/my-list.css') }}">
+</head>
+
+<body class="my-list">
+    <section class="d-flex">
+        <div class="container">
+            <div class="row justify-content-center align-self-center">
+                    <div class="card fat">
+                        <div class="card-body my-auto">
+                            <h4 class="card-title">ToDo List</h4>
+                            
+                            {% block list %}
+                            <form action="/add_item" method="POST">
+                            <div class="form-group">
+                                <label>Task Description</label>
+                                <input type="text" name="itemdes" class="form-control" placeholder="Enter task description">
+                            </div>
+                            <div class="form-group">
+                                <label>Deadline (optional)</label>
+                                <input type="date" name="deadline" class="form-control">
+                            </div>
+                            <div class="form-group no-margin">
+                                
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                    Add Item to The List
+                                    </button>
+                                
+                            </div>
+                            </form>
+                            {% endblock %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/myjquery.js') }}"></script>
+</body>
+
+</html>
